@@ -88,16 +88,16 @@ class _WeatherContainerState extends State<WeatherContainer> {
 
   Widget contentDownloading() {
     return Container(
-      margin: EdgeInsets.all(25),
+      margin: EdgeInsets.all(2),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
             'Fetching Weather...',
-            style: TextStyle(fontSize: 20),
+            style: TextStyle(fontSize: 10),
           ),
-          SizedBox(height: 50),
-          CircularProgressIndicator(strokeWidth: 10),
+          SizedBox(height: 5),
+          CircularProgressIndicator(strokeWidth: 4),
         ],
       ),
     );
@@ -109,7 +109,7 @@ class _WeatherContainerState extends State<WeatherContainer> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            'Press the button to download the Weather forecast',
+            ' download the Weather forecast',
           ),
         ],
       ),
@@ -132,6 +132,7 @@ class _WeatherContainerState extends State<WeatherContainer> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Container(
+          height: 29,
           margin: EdgeInsets.all(5),
           child: TextButton(
             child: Text(
@@ -145,6 +146,7 @@ class _WeatherContainerState extends State<WeatherContainer> {
           ),
         ),
         Container(
+          height: 29,
           margin: EdgeInsets.all(5),
           child: TextButton(
             child: Text(
@@ -167,13 +169,13 @@ class _WeatherContainerState extends State<WeatherContainer> {
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
         _buttons(),
-        SizedBox(height: 20),
+        SizedBox(height: 1),
         Text(
           'Output:',
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 5),
         ),
         Divider(
-          height: 20.0,
+          height: 5.0,
           thickness: 2.0,
         ),
         Expanded(child: _resultView()),
